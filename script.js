@@ -2,19 +2,24 @@ window.onload = function() {
 
 let cartas = [];
 
-// crear 130 cartas
-for(let i=1;i<=130;i++){
+// crear 130 cartas con la nueva ruta de imagen
+for(let i = 1; i <= 130; i++){
     cartas.push({
-        id:i,
-        nombre:"Carta " + i,
-        img: "https://via.placeholder.com/120x170?text=" + i,
-        tengo:false
+        id: i,
+        nombre: "Carta " + i,
+        img: `img_pkm/8BXG_EN_${i}.png`,
+        tengo: false
     });
 }
 
-// cargar progreso
+// cargar progreso guardado
 if(localStorage.getItem("cartas")){
-    cartas = JSON.parse(localStorage.getItem("cartas"));
+    let guardadas = JSON.parse(localStorage.getItem("cartas"));
+    // actualizar las rutas de las imágenes de las cartas guardadas
+    cartas = guardadas.map(c => ({
+        ...c,
+        img: `img_pkm/8BXG_EN_${c.id}.png`   // forzar la nueva ruta
+    }));
 }
 
 const contenedor = document.getElementById("contenedor");
@@ -36,7 +41,6 @@ function render(){
         div.innerHTML = `
             <div class="carta-inner">
                 <div class="carta-front"></div>
-
                 <div class="carta-back">
                     <img src="${carta.img}" 
                          onerror="this.src='https://via.placeholder.com/120x170?text=${carta.id}'">
