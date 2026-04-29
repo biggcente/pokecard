@@ -7,7 +7,7 @@ for(let i = 1; i <= 130; i++){
     cartas.push({
         id: i,
         nombre: "Carta " + i,
-        img: `img_pkm/8BXG_EN_${i}.png`,
+        img: `assets/img_pkm/8BXG_EN_${i}.png`,
         tengo: false
     });
 }
@@ -18,7 +18,7 @@ if(localStorage.getItem("cartas")){
     // actualizar las rutas de las imágenes de las cartas guardadas
     cartas = guardadas.map(c => ({
         ...c,
-        img: `img_pkm/8BXG_EN_${c.id}.png`   // forzar la nueva ruta
+        img: `assets/img_pkm/8BXG_EN_${c.id}.png`   // forzar la nueva ruta
     }));
 }
 
