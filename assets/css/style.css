@@ -5,7 +5,6 @@ body {
     text-align: center;
 }
 
-/* header más limpio */
 header {
     background: #071426;
     padding: 20px;
@@ -13,87 +12,50 @@ header {
     border-radius: 10px;
 }
 
-/* stats */
 .stats {
     margin: 15px;
 }
 
-/* GRID 5 POR FILA */
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 140px); /* mejor tamaño */
-    gap: 20px;
+    grid-template-columns: repeat(4, 200px);
+    gap: 25px;
     justify-content: center;
     padding: 20px;
 }
 
-/* carta */
+/* carta simple */
 .carta {
-    width: 140px;
-    height: 200px; /* 👈 proporción correcta */
-    perspective: 1000px;
-    cursor: pointer;
-}
-
-/* animación */
-.carta-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-/* girar */
-.carta.tengo .carta-inner {
-    transform: rotateY(180deg);
-}
-
-/* caras */
-.carta-front, 
-.carta-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    backface-visibility: hidden;
-    overflow: hidden;
-}
-
-/* reverso Pokémon */
-.carta-front {
-    background: url('https://images.pokemontcg.io/cardback.png') center/cover;
-    filter: grayscale(100%);
-}
-
-/* carta visible */
-.carta-back {
-    transform: rotateY(180deg);
+    width: 200px;
+    height: 300px;
     background: #161b22;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    border-radius: 12px;
     padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 /* imagen */
-.carta-back img {
+.carta img {
     width: 100%;
-    height: 100%; 
-    object-fit: contain; 
+    height: 230px; 
+    object-fit: contain;
     border-radius: 8px;
-
 }
 
 /* texto */
-.carta-back p {
+.carta p {
     font-size: 12px;
-    margin: 2px;
+    margin-top: 5px;
 }
 
-/* hover mejorado */
+/* BLOQUEADA (NO tengo) */
+.bloqueada {
+    filter: grayscale(100%) brightness(0.6);
+    opacity: 0.7;
+}
+
+/* hover */
 .carta:hover {
     transform: scale(1.08);
 }
-
