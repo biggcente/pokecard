@@ -1,61 +1,115 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: white;
-    text-align: center;
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Arial, sans-serif;
 }
 
-header {
-    background: #071426;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+/* BODY */
+body{
+    background: linear-gradient(135deg, #0d1117, #1f2937);
+    color:white;
+    text-align:center;
 }
 
-.stats {
-    margin: 15px;
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    gap: 25px;
-    justify-content: center;
-    padding: 20px;
+.header h1{
+    font-size:22px;
 }
 
-/* carta simple */
-.carta {
-    width: 200px;
-    height: 300px;
-    background: #161b22;
-    border-radius: 12px;
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+/* ACCIONES (BOTONES + USUARIO) */
+.acciones{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-/* imagen */
-.carta img {
-    width: 100%;
-    height: 230px; 
-    object-fit: contain;
-    border-radius: 8px;
+#userName{
+    font-size:14px;
+    color:#aaa;
 }
 
-/* texto */
-.carta p {
-    font-size: 12px;
-    margin-top: 5px;
+.acciones button{
+    padding:8px 14px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#ff4d4d,#ff9900);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-/* BLOQUEADA (NO tengo) */
-.bloqueada {
+.acciones button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px rgba(255,100,0,0.6);
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin:20px;
+    font-size:18px;
+}
+
+.stats p{
+    background: rgba(255,255,255,0.05);
+    padding:10px 20px;
+    border-radius:10px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+/* CARTAS */
+.carta{
+    background:#111827;
+    border-radius:15px;
+    padding:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* IMAGEN CARTA */
+.carta img{
+    width:100%;
+    height:230px;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+/* TEXTO CARTA */
+.carta p{
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* BLOQUEADA */
+.bloqueada{
     filter: grayscale(100%) brightness(0.6);
-    opacity: 0.7;
+    opacity:0.7;
 }
 
-/* hover */
-.carta:hover {
-    transform: scale(1.08);
+/* HOVER */
+.carta:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px rgba(255,255,255,0.2);
 }

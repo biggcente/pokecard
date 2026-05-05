@@ -64,3 +64,14 @@ function guardar(){
 render();
 
 }
+
+function irLogin(){
+    window.location.href = "login.html";
+}
+
+// Mostrar usuario
+let data = JSON.parse(localStorage.getItem("usuario"));
+
+if(localStorage.getItem("logueado") === "true" && data){
+    document.getElementById("userName").innerText = "👤 " + data.user;
+}

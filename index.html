@@ -7,17 +7,24 @@
 </head>
 <body>
 
-<header>
+<header class="header">
     <h1>🔥 Pokédex Phantasmal Flames</h1>
+
+    <div class="acciones">
+        <span id="userName">👤 Invitado</span>
+        <button onclick="irLogin()">🔐 Acceder</button>
+    </div>
 </header>
 
 <div class="stats">
-    <p>Tienes: <span id="tienes">0</span></p>
-    <p>Faltan: <span id="faltan">0</span></p>
+    <p>📦 Tienes: <span id="tienes">0</span></p>
+    <p>❌ Faltan: <span id="faltan">0</span></p>
 </div>
 
 <div class="grid" id="contenedor"></div>
 
+<script src="/assets/js/ui.js"></script>
 <script src="/assets/js/script.js"></script>
+
 </body>
 </html>
