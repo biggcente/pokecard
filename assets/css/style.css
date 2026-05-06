@@ -1,3 +1,31 @@
+/* HEADER - contenedor principal */
+.header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  min-height: 70px;
+}
+
+/* LOGO centrado absoluto */
+.FantasmalLogo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;         
+  display: block;
+}
+
+/* ACCIONES (derecha) */
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 /* RESET */
 *{
     margin:0;
@@ -12,41 +40,12 @@ body{
     color:white;
     text-align:center;
 }
-/* LOGO */
-.FantasmalLogo{
-    display: flex;
-    width: 150px;
-    margin: 0px 575px;
-    align-items: center;
-    vertical-align: center;
-    position: absolute
-    
-}
 
-/* HEADER */
-.header{
-    padding:0px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.1);
-}
 
 .header h1{
     font-size:22px;
 }
 
-/* ACCIONES (BOTONES + USUARIO) */
-.acciones{
-    padding:20px;
-    display:flex;
-    align-items:center;
-    text-align: center;
-    gap:20px;
-    #userName{
-        font-size:14px;
-        color:#aaa;
-    }
-}
 
 
 .acciones button{
@@ -230,3 +229,21 @@ body{
     display: none;
 }
 
+/*====ADAPTACION PARA MOVILES====*/
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .FantasmalLogo {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    order: 1;
+  }
+  .acciones {
+    order: 2;
+    margin-top: 5px;
+  }
+}
