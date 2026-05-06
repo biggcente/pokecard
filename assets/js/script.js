@@ -81,7 +81,7 @@ function mostrarModal() {
 }
 
 // Oculta el modal
-function cerrarModal() {
+function cerrarModal2() {
     document.getElementById("modalAuth").classList.remove("active");
 }
 
@@ -165,10 +165,10 @@ function actualizarHeader() {
     }
 }
 
-function abrirModal() {
+function abrirModal1() {
   document.getElementById("miModal").style.display = "block";
 }
 
-function cerrarModal() {
+function cerrarModal1() {
   document.getElementById("miModal").style.display = "none";
 }
