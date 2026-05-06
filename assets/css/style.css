@@ -12,13 +12,20 @@ body{
     color:white;
     text-align:center;
 }
+/* LOGO */
+.FantasmalLogo{
+    display: flex;
+    width: 150px;
+    margin: 0px 575px;
+    align-items: center;
+    vertical-align: center;
+    position: absolute
+    
+}
 
 /* HEADER */
 .header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 30px;
+    padding:0px;
     background: rgba(0,0,0,0.6);
     backdrop-filter: blur(10px);
     border-bottom:1px solid rgba(255,255,255,0.1);
@@ -30,15 +37,17 @@ body{
 
 /* ACCIONES (BOTONES + USUARIO) */
 .acciones{
+    padding:20px;
     display:flex;
     align-items:center;
-    gap:10px;
+    text-align: center;
+    gap:20px;
+    #userName{
+        font-size:14px;
+        color:#aaa;
+    }
 }
 
-#userName{
-    font-size:14px;
-    color:#aaa;
-}
 
 .acciones button{
     padding:8px 14px;
