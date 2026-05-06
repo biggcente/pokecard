@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>PokeCard - Pokédex</title>
-<link rel="stylesheet" href="/assets/css/style.css">  
+    <meta charset="UTF-8">
+    <title>PokeCard - Pokédex</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
 <header class="header">
     <h1>🔥 Pokédex Phantasmal Flames</h1>
-
-    <div class="acciones">
-        <span id="userName">👤 Invitado</span>
-        <button onclick="irLogin()">🔐 Acceder</button>
+    <div class="acciones" id="accionesHeader">
     </div>
 </header>
 
@@ -22,6 +19,35 @@
 </div>
 
 <div class="grid" id="contenedor"></div>
+
+<!-- Modelo de Login / Registro -->
+<div id="modalAuth" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">✖</span>
+
+        <!-- Pestañas -->
+        <div class="tabs">
+            <a onclick="mostrarFormulario('login')">Iniciar sesión</a> |
+            <a onclick="mostrarFormulario('registro')">Registrarse</a>
+        </div>
+
+        <!-- Formulario de inicio de sesión -->
+        <div id="formLogin">
+            <h3>Iniciar sesión</h3>
+            <input type="text" id="loginUser" placeholder="Usuario">
+            <input type="password" id="loginPass" placeholder="Contraseña">
+            <button onclick="login()">Entrar</button>
+        </div>
+
+        <!-- Formulario de registro -->
+        <div id="formRegistro" class="hidden">
+            <h3>Registrarse</h3>
+            <input type="text" id="regUser" placeholder="Usuario">
+            <input type="password" id="regPass" placeholder="Contraseña">
+            <button onclick="register()">Crear cuenta</button>
+        </div>
+    </div>
+</div>
 
 <script src="/assets/js/ui.js"></script>
 <script src="/assets/js/script.js"></script>
